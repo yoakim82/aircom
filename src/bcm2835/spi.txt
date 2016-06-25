@@ -1,0 +1,24 @@
+
+mkdir /gpio
+
+cd /gpio
+
+ladda ner bcm2835-1.25.tar.gz
+
+tar zxvf bcm2835-1.25.tar.gz
+
+cd bcm2835-1.25
+
+./configure make
+
+sudo make check
+
+sudo make install
+
+
+för att testa:
+scp:a över IOToggle_Clib_bcm2835.c från b3
+
+gcc IOToggle_Clib_bcm2835.c -o test -I/usr/local/include -L/usr/local/lib -lbcm2835
+
+sudo ./test...
